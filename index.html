@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Digital Garden — A Daily Writing Journey</title>
+  <meta name="description" content="Welcome to my digital garden, where I write daily about technology, coding, productivity, and life. Discover ideas, tutorials, and reflections.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourblogdomain.com/">
+  <meta property="og:title" content="Digital Garden — A Daily Writing Journey">
+  <meta property="og:description" content="Welcome to my digital garden, where I write daily about technology, coding, productivity, and life. Discover ideas, tutorials, and reflections.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yourblogdomain.com/">
+  <meta property="twitter:title" content="Digital Garden — A Daily Writing Journey">
+  <meta property="twitter:description" content="Welcome to my digital garden, where I write daily about technology, coding, productivity, and life. Discover ideas, tutorials, and reflections.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google AdSense Script -->
+  <!-- 
+    CRITICAL: Replace ca-pub-7731758020247248 with your actual Google AdSense Publisher ID.
+    You can also enable Auto Ads in your AdSense Console, and they will run automatically.
+  -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7731758020247248" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="nav-logo">
+        <span class="logo-dot"></span>
+        Digital Garden
+      </a>
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <!-- Moon Icon (for Light Mode) -->
+          <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <!-- Sun Icon (for Dark Mode) -->
+          <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m2.828 0l-.707-.707M17.657 6.343l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Documenting the <span>Daily Journey</span></h1>
+    <p>A digital garden exploring software engineering, productivity, habits, and building in public. New posts added every single day.</p>
+  </section>
+
+  <!-- Search & Filters -->
+  <div class="controls-container">
+    <!-- Search Bar -->
+    <div class="search-wrapper">
+      <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input type="text" id="search-input" class="search-input" placeholder="Search articles by title, description, or tags...">
+    </div>
+
+    <!-- Tag Filter Pills -->
+    <div class="tags-wrapper" id="tags-wrapper">
+      <button class="tag-pill active" data-tag="all">All Posts</button>
+      <!-- JavaScript will dynamically insert other tags here -->
+    </div>
+  </div>
+
+  <!-- Main Content Grid -->
+  <main class="main-layout">
+    <!-- Blog Feed -->
+    <section class="blog-feed" id="blog-feed">
+      <!-- JavaScript will dynamically insert post cards here -->
+      <div style="text-align: center; padding: 3rem; color: var(--text-secondary);">
+        Loading articles...
+      </div>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Google Sidebar Ad -->
+      <div class="sidebar-widget ad-container sidebar-ad">
+        <!-- 
+          AdSense Ad Unit. Replace data-ad-client and data-ad-slot with your actual values.
+          Once live, AdSense will automatically populate this space.
+        -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7731758020247248"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- Popular Tags Widget -->
+      <div class="sidebar-widget">
+        <h2 class="widget-title">Explore Topics</h2>
+        <div class="popular-tags-list" id="sidebar-tags-list">
+          <!-- JavaScript will dynamically insert tags here -->
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Horizontal Google Banner Ad -->
+  <div class="ad-container banner-ad">
+    <!-- 
+      AdSense Ad Unit. Replace data-ad-client and data-ad-slot with your actual values.
+    -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7731758020247248"
+         data-ad-slot="0987654321"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">Digital Garden</div>
+    <p>&copy; 2026 Digital Garden. Built with vanilla HTML, CSS, and JS. All rights reserved.</p>
+    <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--text-muted);">
+      This site is monetized using Google AdSense. Ads are tailored based on cookies and privacy preferences.
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>

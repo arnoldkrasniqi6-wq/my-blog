@@ -1,0 +1,21 @@
+{
+  "name": "systemic-blog-page",
+  "version": "1.0.0",
+  "description": "A modern, premium, markdown-based blog website with Google Ads integration.",
+  "main": "index.html",
+  "scripts": {
+    "build-index": "node scripts/generate-index.js",
+    "build-index:ps": "powershell -ExecutionPolicy Bypass -File scripts/generate-index.ps1",
+    "create-post": "node scripts/create-post.js",
+    "create-post:ps": "powershell -ExecutionPolicy Bypass -File scripts/create-post.ps1",
+    "dev": "npx -y serve ."
+  },
+  "keywords": [
+    "blog",
+    "markdown",
+    "portfolio",
+    "adsense"
+  ],
+  "author": "",
+  "license": "ISC"
+}

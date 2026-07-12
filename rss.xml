@@ -7,6 +7,13 @@
   <language>en-us</language>
   <atom:link href="https://yourblogdomain.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Organizing Blog Posts in a Folder</title>
+    <link>https://yourblogdomain.com/post.html?id=2026-07-12-organizing-blog-posts-in-a-folder</link>
+    <guid>https://yourblogdomain.com/post.html?id=2026-07-12-organizing-blog-posts-in-a-folder</guid>
+    <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+    <description>A comprehensive guide on how our Markdown-based blogging system organizes posts in a single folder, parses frontmatter metadata, and dynamically updates the UI and feeds.</description>
+  </item>
+  <item>
     <title>Welcome to My Daily Blog</title>
     <link>https://yourblogdomain.com/post.html?id=2026-06-28-welcome-to-my-blog</link>
     <guid>https://yourblogdomain.com/post.html?id=2026-06-28-welcome-to-my-blog</guid>

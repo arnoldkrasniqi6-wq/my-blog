@@ -196,5 +196,30 @@ function initAdSense() {
   }
 }
 
+// Newsletter Form Handler
+function setupNewsletter() {
+  const form = document.getElementById('newsletter-form');
+  const successMsg = document.getElementById('newsletter-success');
+  const emailInput = document.getElementById('newsletter-email');
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      // If the form action is still "#", handle it locally as a demo.
+      // Once the user puts their actual email service action URL, this can be removed or adapted.
+      if (form.getAttribute('action') === '#') {
+        e.preventDefault();
+        successMsg.style.display = 'block';
+        emailInput.value = '';
+        setTimeout(() => {
+          successMsg.style.display = 'none';
+        }, 5000);
+      }
+    });
+  }
+}
+
 // Run on page load
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  setupNewsletter();
+});

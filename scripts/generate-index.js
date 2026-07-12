@@ -126,6 +126,9 @@ function generateIndex() {
 
   // Generate sitemap.xml
   generateSitemap(posts);
+
+  // Generate rss.xml
+  generateRSS(posts);
 }
 
 function generateSitemap(posts) {
@@ -153,6 +156,49 @@ function generateSitemap(posts) {
 
   fs.writeFileSync(OUTPUT_SITEMAP, sitemapContent, 'utf-8');
   console.log('Successfully generated sitemap.xml.');
+}
+
+function generateRSS(posts) {
+  console.log('Generating rss.xml...');
+  const rssPath = path.join(__dirname, '../rss.xml');
+  
+  let rssContent = `<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>LiveBlogger</title>
+  <link>${SITE_URL}</link>
+  <description>A daily writing journey</description>
+  <language>en-us</language>
+  <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />
+`;
+
+  posts.forEach(post => {
+    const pubDate = new Date(post.date).toUTCString();
+    rssContent += `  <item>
+    <title>${escapeXml(post.title)}</title>
+    <link>${SITE_URL}/post.html?id=${post.id}</link>
+    <guid>${SITE_URL}/post.html?id=${post.id}</guid>
+    <pubDate>${pubDate}</pubDate>
+    <description>${escapeXml(post.description)}</description>
+  </item>\n`;
+  });
+
+  rssContent += `</channel>\n</rss>`;
+
+  fs.writeFileSync(rssPath, rssContent, 'utf-8');
+  console.log('Successfully generated rss.xml.');
+}
+
+function escapeXml(unsafe) {
+  return unsafe.replace(/[<>&'"]/g, (c) => {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+    }
+  });
 }
 
 generateIndex();

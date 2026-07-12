@@ -148,3 +148,39 @@ foreach ($post in $sortedPosts) {
 $sitemap += "`n</urlset>"
 [System.IO.File]::WriteAllText($outputSitemap, $sitemap)
 Write-Host "Successfully generated sitemap.xml."
+
+# Generate rss.xml
+$rssPath = Join-Path $PSScriptRoot "../rss.xml"
+$rss = @"
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>LiveBlogger</title>
+  <link>$siteUrl</link>
+  <description>A daily writing journey</description>
+  <language>en-us</language>
+  <atom:link href="$siteUrl/rss.xml" rel="self" type="application/rss+xml" />
+"@
+
+foreach ($post in $sortedPosts) {
+    $dateObj = [datetime]$post.date
+    $pubDate = $dateObj.ToUniversalTime().ToString("r")
+    
+    $escapedTitle = $post.title -replace '&', '&amp;' -replace '<', '&lt;' -replace '>', '&gt;' -replace '"', '&quot;' -replace "'", '&apos;'
+    $escapedDesc = $post.description -replace '&', '&amp;' -replace '<', '&lt;' -replace '>', '&gt;' -replace '"', '&quot;' -replace "'", '&apos;'
+
+    $rss += @"
+
+  <item>
+    <title>$escapedTitle</title>
+    <link>$siteUrl/post.html?id=$($post.id)</link>
+    <guid>$siteUrl/post.html?id=$($post.id)</guid>
+    <pubDate>$pubDate</pubDate>
+    <description>$escapedDesc</description>
+  </item>
+"@
+}
+
+$rss += "`n</channel>`n</rss>"
+[System.IO.File]::WriteAllText($rssPath, $rss)
+Write-Host "Successfully generated rss.xml."

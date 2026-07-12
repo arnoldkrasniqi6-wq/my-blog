@@ -109,6 +109,21 @@
         </script>
       </div>
 
+      <!-- Newsletter Widget -->
+      <div class="sidebar-widget">
+        <h2 class="widget-title">Subscribe</h2>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+          Get my daily articles delivered straight to your inbox. No spam. Unsubscribe at any time.
+        </p>
+        <form id="newsletter-form" class="newsletter-form" action="#" method="POST">
+          <input type="email" id="newsletter-email" name="email" class="newsletter-input" placeholder="Enter your email..." required style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background-color: var(--bg-secondary); color: var(--text-primary); margin-bottom: 0.75rem; outline: none; font-family: var(--font-sans); transition: all var(--transition-fast);">
+          <button type="submit" class="newsletter-btn" style="width: 100%; padding: 0.75rem; border-radius: var(--radius-sm); border: none; background: var(--accent-gradient); color: #ffffff; font-weight: 600; cursor: pointer; font-family: var(--font-sans); transition: opacity var(--transition-fast);">Subscribe</button>
+        </form>
+        <div id="newsletter-success" style="display: none; margin-top: 0.75rem; font-size: 0.85rem; color: var(--accent); font-weight: 500; text-align: center;">
+          Thanks for subscribing! Please check your inbox.
+        </div>
+      </div>
+
       <!-- Popular Tags Widget -->
       <div class="sidebar-widget">
         <h2 class="widget-title">Explore Topics</h2>

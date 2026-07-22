@@ -12,6 +12,7 @@
     <guid>https://yourblogdomain.com/post.html?id=2026-07-22-odyssey-movie-review</guid>
     <pubDate>Tue, 21 Jul 2026 23:00:00 GMT</pubDate>
     <description>An in-depth review of the new cinematic adaptation of Homer&apos;s epic. We explore how it balances massive mythological scale with deeply personal storytelling.</description>
+    <enclosure url="images/odyssey_movie_cover.jpg" type="image/jpeg" />
   </item>
   <item>
     <title>Welcome to My Daily Blog</title>
@@ -19,6 +20,7 @@
     <guid>https://yourblogdomain.com/post.html?id=2026-06-28-welcome-to-my-blog</guid>
     <pubDate>Sat, 27 Jun 2026 23:00:00 GMT</pubDate>
     <description>Welcome to my new digital garden! This is the very first post of a daily writing habit. Here is why I am starting this journey.</description>
+    <enclosure url="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" type="image/jpeg" />
   </item>
   <item>
     <title>The Power of Daily Writing</title>
@@ -26,6 +28,7 @@
     <guid>https://yourblogdomain.com/post.html?id=2026-06-27-the-power-of-daily-writing</guid>
     <pubDate>Fri, 26 Jun 2026 23:00:00 GMT</pubDate>
     <description>Exploring how writing every day can transform your career, enhance your creativity, and build a powerful compounding asset.</description>
+    <enclosure url="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" type="image/jpeg" />
   </item>
 </channel>
 </rss>

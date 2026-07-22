@@ -174,12 +174,13 @@ function generateRSS(posts) {
 
   posts.forEach(post => {
     const pubDate = new Date(post.date).toUTCString();
+    const enclosureTag = post.coverImage ? `\n    <enclosure url="${escapeXml(post.coverImage)}" type="image/jpeg" />` : '';
     rssContent += `  <item>
     <title>${escapeXml(post.title)}</title>
     <link>${SITE_URL}/post.html?id=${post.id}</link>
     <guid>${SITE_URL}/post.html?id=${post.id}</guid>
     <pubDate>${pubDate}</pubDate>
-    <description>${escapeXml(post.description)}</description>
+    <description>${escapeXml(post.description)}</description>${enclosureTag}
   </item>\n`;
   });
 

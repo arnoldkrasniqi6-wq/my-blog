@@ -168,6 +168,12 @@ foreach ($post in $sortedPosts) {
     
     $escapedTitle = $post.title -replace '&', '&amp;' -replace '<', '&lt;' -replace '>', '&gt;' -replace '"', '&quot;' -replace "'", '&apos;'
     $escapedDesc = $post.description -replace '&', '&amp;' -replace '<', '&lt;' -replace '>', '&gt;' -replace '"', '&quot;' -replace "'", '&apos;'
+    
+    $enclosureTag = ""
+    if ($post.coverImage -and $post.coverImage.Trim() -ne "") {
+        $escapedImage = $post.coverImage -replace '&', '&amp;' -replace '<', '&lt;' -replace '>', '&gt;' -replace '"', '&quot;' -replace "'", '&apos;'
+        $enclosureTag = "`n    <enclosure url=""$escapedImage"" type=""image/jpeg"" />"
+    }
 
     $rss += @"
 
@@ -176,7 +182,7 @@ foreach ($post in $sortedPosts) {
     <link>$siteUrl/post.html?id=$($post.id)</link>
     <guid>$siteUrl/post.html?id=$($post.id)</guid>
     <pubDate>$pubDate</pubDate>
-    <description>$escapedDesc</description>
+    <description>$escapedDesc</description>$enclosureTag
   </item>
 "@
 }

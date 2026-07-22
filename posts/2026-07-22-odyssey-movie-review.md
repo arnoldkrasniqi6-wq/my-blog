@@ -3,7 +3,7 @@ title: "Epic in Scale, Intimate in Heart: A Review of The Odyssey"
 date: "2026-07-22"
 tags: ["Movies", "Reviews", "Cinema"]
 description: "An in-depth review of the new cinematic adaptation of Homer's epic. We explore how it balances massive mythological scale with deeply personal storytelling."
-coverImage: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80"
+coverImage: "images/odyssey_movie_cover.jpg"
 ---
 
 Homer’s *The Odyssey* is arguably the oldest adventure story in Western literature, making any modern cinematic adaptation a monumental challenge. How do you translate a ten-year journey filled with monsters, gods, and existential despair into a two-hour film? 
@@ -33,5 +33,8 @@ While purists of classical literature might complain about the omission of certa
 ---
 
 ### Watch the Trailer
-You can check out the cinematic trailer for the movie on YouTube here:
-[Watch The Odyssey Trailer on YouTube](https://www.youtube.com/results?search_query=the+odyssey+movie+trailer)
+Below is the official cinematic trailer for the movie:
+
+<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0; border-radius: var(--radius-md); box-shadow: var(--card-shadow);">
+  <iframe src="https://www.youtube.com/embed/Mzw2ttJD2qQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: var(--radius-md);"></iframe>
+</div>

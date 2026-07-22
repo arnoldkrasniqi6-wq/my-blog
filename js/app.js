@@ -203,12 +203,48 @@ function setupNewsletter() {
   const emailInput = document.getElementById('newsletter-email');
 
   if (form) {
-    form.addEventListener('submit', (e) => {
-      // If the form action is still "#", handle it locally as a demo.
-      // Once the user puts their actual email service action URL, this can be removed or adapted.
-      if (form.getAttribute('action') === '#') {
+    form.addEventListener('submit', async (e) => {
+      const action = form.getAttribute('action');
+      
+      // If it's not the placeholder, handle it via AJAX
+      if (action && action !== '#') {
+        e.preventDefault();
+        
+        const btn = form.querySelector('.newsletter-btn');
+        const originalText = btn.textContent;
+        btn.textContent = 'Subscribing...';
+        btn.disabled = true;
+
+        try {
+          const formData = new FormData(form);
+          
+          // Send request to MailerLite
+          await fetch(action, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors' // Use no-cors since we are posting to a different domain
+          });
+
+          // Show success message and reset input
+          successMsg.style.display = 'block';
+          successMsg.textContent = 'Thanks for subscribing! Please check your inbox.';
+          emailInput.value = '';
+        } catch (err) {
+          console.error('Subscription error:', err);
+          successMsg.style.display = 'block';
+          successMsg.textContent = 'Something went wrong. Please try again.';
+        } finally {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          setTimeout(() => {
+            successMsg.style.display = 'none';
+          }, 6000);
+        }
+      } else {
+        // Mock demo mode
         e.preventDefault();
         successMsg.style.display = 'block';
+        successMsg.textContent = 'Thanks for subscribing! (Demo Mode)';
         emailInput.value = '';
         setTimeout(() => {
           successMsg.style.display = 'none';

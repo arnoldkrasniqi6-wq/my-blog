@@ -1,5 +1,18 @@
 [
     {
+        "id":  "2026-07-22-odyssey-movie-review",
+        "title":  "Epic in Scale, Intimate in Heart: A Review of The Odyssey",
+        "date":  "2026-07-22",
+        "tags":  [
+                     "[\"Movies\"",
+                     "\"Reviews\"",
+                     "\"Cinema\"]"
+                 ],
+        "description":  "An in-depth review of the new cinematic adaptation of Homer\u0027s epic. We explore how it balances massive mythological scale with deeply personal storytelling.",
+        "coverImage":  "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format\u0026fit=crop\u0026w=1200\u0026q=80",
+        "readingTime":  "2 min read"
+    },
+    {
         "id":  "2026-06-28-welcome-to-my-blog",
         "title":  "Welcome to My Daily Blog",
         "date":  "2026-06-28",

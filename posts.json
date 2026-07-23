@@ -1,5 +1,44 @@
 [
     {
+        "id":  "2026-07-23-sunshine-movie-review",
+        "title":  "The Brilliant, Blind Heat of Danny Boyle\u0027s Sunshine",
+        "date":  "2026-07-23",
+        "tags":  [
+                     "Movies",
+                     "Reviews",
+                     "Sci-Fi"
+                 ],
+        "description":  "We review Danny Boyle\u0027s 2007 space thriller Sunshine. A visual and psychological masterpiece that explores humanity\u0027s fragile place in the face of stellar power.",
+        "coverImage":  "images/sunshine_movie_cover.jpg",
+        "readingTime":  "2 min read"
+    },
+    {
+        "id":  "2026-07-23-firefly-series-review",
+        "title":  "Find a Crew, Find a Job, Keep Flying: A Review of Firefly",
+        "date":  "2026-07-23",
+        "tags":  [
+                     "TV Series",
+                     "Reviews",
+                     "Sci-Fi"
+                 ],
+        "description":  "We review the cult-classic space western Firefly. Exploring how a show with only 14 episodes created one of the most beloved universes in television history.",
+        "coverImage":  "images/firefly_cover.jpg",
+        "readingTime":  "3 min read"
+    },
+    {
+        "id":  "2026-07-23-dune-part-two-review",
+        "title":  "The Rise of the Messiah: A Review of Dune (Part Two)",
+        "date":  "2026-07-23",
+        "tags":  [
+                     "Movies",
+                     "Reviews",
+                     "Sci-Fi"
+                 ],
+        "description":  "Dune: Part Two is an absolute cinematic triumph. We review Denis Villeneuve\u0027s sequel, exploring how it turns a standard hero\u0027s journey on its head.",
+        "coverImage":  "images/dune_two_cover.jpg",
+        "readingTime":  "2 min read"
+    },
+    {
         "id":  "2026-07-23-dune-part-one-review",
         "title":  "A Masterclass in Sci-Fi Worldbuilding: A Review of Dune (Part One)",
         "date":  "2026-07-23",
@@ -13,18 +52,6 @@
         "readingTime":  "3 min read"
     },
     {
-        "id":  "2026-07-23-dune-part-one",
-        "title":  "Epic in Scale, Intimate in Heart: A Review of The Odyssey",
-        "date":  "2026-07-22",
-        "tags":  [
-                     "Movies",
-                     "Reviews"
-                 ],
-        "description":  "An in-depth review of the new cinematic adaptation of Homer\u0027s epic. We explore how it balances massive mythological scale with deeply personal storytelling.",
-        "coverImage":  "images/odyssey_movie_cover.jpg",
-        "readingTime":  "2 min read"
-    },
-    {
         "id":  "2026-07-22-odyssey-movie-review",
         "title":  "Epic in Scale, Intimate in Heart: A Review of The Odyssey",
         "date":  "2026-07-22",
@@ -34,28 +61,6 @@
                  ],
         "description":  "An in-depth review of the new cinematic adaptation of Homer\u0027s epic. We explore how it balances massive mythological scale with deeply personal storytelling.",
         "coverImage":  "images/odyssey_movie_cover.jpg",
-        "readingTime":  "2 min read"
-    },
-    {
-        "id":  "2026-06-28-welcome-to-my-blog",
-        "title":  "Welcome to My Daily Blog",
-        "date":  "2026-06-28",
-        "tags":  [
-                     "Personal"
-                 ],
-        "description":  "Welcome to my new blog! This is the very first post of a daily writing habit. Here is why I am starting this journey.",
-        "coverImage":  "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format\u0026fit=crop\u0026w=1200\u0026q=80",
-        "readingTime":  "2 min read"
-    },
-    {
-        "id":  "2026-06-27-the-power-of-daily-writing",
-        "title":  "The Power of Daily Writing",
-        "date":  "2026-06-27",
-        "tags":  [
-                     "Writing"
-                 ],
-        "description":  "Exploring how writing every day can transform your career, enhance your creativity, and build a powerful compounding asset.",
-        "coverImage":  "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format\u0026fit=crop\u0026w=1200\u0026q=80",
         "readingTime":  "2 min read"
     }
 ]

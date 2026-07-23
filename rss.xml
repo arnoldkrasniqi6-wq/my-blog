@@ -7,6 +7,30 @@
   <language>en-us</language>
   <atom:link href="https://liveblogger.info/rss.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>The Brilliant, Blind Heat of Danny Boyle&apos;s Sunshine</title>
+    <link>https://liveblogger.info/post.html?id=2026-07-23-sunshine-movie-review</link>
+    <guid>https://liveblogger.info/post.html?id=2026-07-23-sunshine-movie-review</guid>
+    <pubDate>Wed, 22 Jul 2026 23:00:00 GMT</pubDate>
+    <description>We review Danny Boyle&apos;s 2007 space thriller Sunshine. A visual and psychological masterpiece that explores humanity&apos;s fragile place in the face of stellar power.</description>
+    <enclosure url="images/sunshine_movie_cover.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>Find a Crew, Find a Job, Keep Flying: A Review of Firefly</title>
+    <link>https://liveblogger.info/post.html?id=2026-07-23-firefly-series-review</link>
+    <guid>https://liveblogger.info/post.html?id=2026-07-23-firefly-series-review</guid>
+    <pubDate>Wed, 22 Jul 2026 23:00:00 GMT</pubDate>
+    <description>We review the cult-classic space western Firefly. Exploring how a show with only 14 episodes created one of the most beloved universes in television history.</description>
+    <enclosure url="images/firefly_cover.jpg" type="image/jpeg" />
+  </item>
+  <item>
+    <title>The Rise of the Messiah: A Review of Dune (Part Two)</title>
+    <link>https://liveblogger.info/post.html?id=2026-07-23-dune-part-two-review</link>
+    <guid>https://liveblogger.info/post.html?id=2026-07-23-dune-part-two-review</guid>
+    <pubDate>Wed, 22 Jul 2026 23:00:00 GMT</pubDate>
+    <description>Dune: Part Two is an absolute cinematic triumph. We review Denis Villeneuve&apos;s sequel, exploring how it turns a standard hero&apos;s journey on its head.</description>
+    <enclosure url="images/dune_two_cover.jpg" type="image/jpeg" />
+  </item>
+  <item>
     <title>A Masterclass in Sci-Fi Worldbuilding: A Review of Dune (Part One)</title>
     <link>https://liveblogger.info/post.html?id=2026-07-23-dune-part-one-review</link>
     <guid>https://liveblogger.info/post.html?id=2026-07-23-dune-part-one-review</guid>
@@ -16,35 +40,11 @@
   </item>
   <item>
     <title>Epic in Scale, Intimate in Heart: A Review of The Odyssey</title>
-    <link>https://liveblogger.info/post.html?id=2026-07-23-dune-part-one</link>
-    <guid>https://liveblogger.info/post.html?id=2026-07-23-dune-part-one</guid>
-    <pubDate>Tue, 21 Jul 2026 23:00:00 GMT</pubDate>
-    <description>An in-depth review of the new cinematic adaptation of Homer&apos;s epic. We explore how it balances massive mythological scale with deeply personal storytelling.</description>
-    <enclosure url="images/odyssey_movie_cover.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Epic in Scale, Intimate in Heart: A Review of The Odyssey</title>
     <link>https://liveblogger.info/post.html?id=2026-07-22-odyssey-movie-review</link>
     <guid>https://liveblogger.info/post.html?id=2026-07-22-odyssey-movie-review</guid>
     <pubDate>Tue, 21 Jul 2026 23:00:00 GMT</pubDate>
     <description>An in-depth review of the new cinematic adaptation of Homer&apos;s epic. We explore how it balances massive mythological scale with deeply personal storytelling.</description>
     <enclosure url="images/odyssey_movie_cover.jpg" type="image/jpeg" />
-  </item>
-  <item>
-    <title>Welcome to My Daily Blog</title>
-    <link>https://liveblogger.info/post.html?id=2026-06-28-welcome-to-my-blog</link>
-    <guid>https://liveblogger.info/post.html?id=2026-06-28-welcome-to-my-blog</guid>
-    <pubDate>Sat, 27 Jun 2026 23:00:00 GMT</pubDate>
-    <description>Welcome to my new blog! This is the very first post of a daily writing habit. Here is why I am starting this journey.</description>
-    <enclosure url="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" type="image/jpeg" />
-  </item>
-  <item>
-    <title>The Power of Daily Writing</title>
-    <link>https://liveblogger.info/post.html?id=2026-06-27-the-power-of-daily-writing</link>
-    <guid>https://liveblogger.info/post.html?id=2026-06-27-the-power-of-daily-writing</guid>
-    <pubDate>Fri, 26 Jun 2026 23:00:00 GMT</pubDate>
-    <description>Exploring how writing every day can transform your career, enhance your creativity, and build a powerful compounding asset.</description>
-    <enclosure url="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" type="image/jpeg" />
   </item>
 </channel>
 </rss>

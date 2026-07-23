@@ -46,18 +46,20 @@ foreach ($file in $files) {
                 
                 # Handle tags array
                 if ($key -eq "tags") {
-                    if ($value -like "[*]") {
+                    if ($value.StartsWith("[") -and $value.EndsWith("]")) {
                         $tagsArray = $value.Substring(1, $value.Length - 2) -split ","
-                        $metadata[$key] = @()
+                        $tempTags = @()
                         foreach ($t in $tagsArray) {
-                            $metadata[$key] += $t.Trim().Replace("'", "").Replace('"', "")
+                            $tempTags += $t.Trim().Replace("'", "").Replace('"', "")
                         }
+                        $metadata[$key] = $tempTags
                     } else {
                         $tagsArray = $value -split ","
-                        $metadata[$key] = @()
+                        $tempTags = @()
                         foreach ($t in $tagsArray) {
-                            $metadata[$key] += $t.Trim()
+                            $tempTags += $t.Trim()
                         }
+                        $metadata[$key] = $tempTags
                     }
                 } else {
                     $metadata[$key] = $value
@@ -71,7 +73,7 @@ foreach ($file in $files) {
     # Set defaults
     $title = if ($metadata.ContainsKey("title")) { $metadata["title"] } else { $id -replace "-", " " }
     $date = if ($metadata.ContainsKey("date")) { $metadata["date"] } else { (Get-Date).ToString("yyyy-MM-dd") }
-    $tags = if ($metadata.ContainsKey("tags")) { $metadata["tags"] } else { @("General") }
+    $tags = if ($metadata.ContainsKey("tags")) { ,$metadata["tags"] } else { ,@("General") }
     $coverImage = if ($metadata.ContainsKey("coverImage")) { $metadata["coverImage"] } else { "" }
     
     # Description fallback

@@ -4,8 +4,8 @@
         "title":  "Epic in Scale, Intimate in Heart: A Review of The Odyssey",
         "date":  "2026-07-22",
         "tags":  [
-                     "[\"Movies\"",
-                     "\"Reviews\"]"
+                     "Movies",
+                     "Reviews"
                  ],
         "description":  "An in-depth review of the new cinematic adaptation of Homer\u0027s epic. We explore how it balances massive mythological scale with deeply personal storytelling.",
         "coverImage":  "images/odyssey_movie_cover.jpg",
@@ -15,7 +15,9 @@
         "id":  "2026-06-28-welcome-to-my-blog",
         "title":  "Welcome to My Daily Blog",
         "date":  "2026-06-28",
-        "tags":  "[\"Personal\"]",
+        "tags":  [
+                     "Personal"
+                 ],
         "description":  "Welcome to my new digital garden! This is the very first post of a daily writing habit. Here is why I am starting this journey.",
         "coverImage":  "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format\u0026fit=crop\u0026w=1200\u0026q=80",
         "readingTime":  "2 min read"
@@ -24,7 +26,9 @@
         "id":  "2026-06-27-the-power-of-daily-writing",
         "title":  "The Power of Daily Writing",
         "date":  "2026-06-27",
-        "tags":  "[\"Writing\"]",
+        "tags":  [
+                     "Writing"
+                 ],
         "description":  "Exploring how writing every day can transform your career, enhance your creativity, and build a powerful compounding asset.",
         "coverImage":  "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format\u0026fit=crop\u0026w=1200\u0026q=80",
         "readingTime":  "2 min read"

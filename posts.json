@@ -1,5 +1,30 @@
 [
     {
+        "id":  "2026-07-23-dune-part-one-review",
+        "title":  "A Masterclass in Sci-Fi Worldbuilding: A Review of Dune (Part One)",
+        "date":  "2026-07-23",
+        "tags":  [
+                     "Movies",
+                     "Reviews",
+                     "Sci-Fi"
+                 ],
+        "description":  "We review Denis Villeneuve\u0027s cinematic masterpiece Dune: Part One. Exploring its monumental scale, haunting score, and faithful adaptation of Frank Herbert\u0027s universe.",
+        "coverImage":  "images/dune_movie_cover.jpg",
+        "readingTime":  "3 min read"
+    },
+    {
+        "id":  "2026-07-23-dune-part-one",
+        "title":  "Epic in Scale, Intimate in Heart: A Review of The Odyssey",
+        "date":  "2026-07-22",
+        "tags":  [
+                     "Movies",
+                     "Reviews"
+                 ],
+        "description":  "An in-depth review of the new cinematic adaptation of Homer\u0027s epic. We explore how it balances massive mythological scale with deeply personal storytelling.",
+        "coverImage":  "images/odyssey_movie_cover.jpg",
+        "readingTime":  "2 min read"
+    },
+    {
         "id":  "2026-07-22-odyssey-movie-review",
         "title":  "Epic in Scale, Intimate in Heart: A Review of The Odyssey",
         "date":  "2026-07-22",

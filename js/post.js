@@ -115,7 +115,7 @@ async function initArticle() {
     // Populate Page Header & Metadata
     const title = metadata.title || postId.replace(/-/g, ' ');
     articleTitle.textContent = title;
-    document.title = `${title} — Digital Garden`;
+    document.title = `${title} — Liveblogger`;
     
     // Update SEO Meta Description dynamically
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -175,7 +175,7 @@ async function initArticle() {
 
 // Render Not Found / Error State
 function renderNotFound(message) {
-  document.title = 'Article Not Found — Digital Garden';
+  document.title = 'Article Not Found — Liveblogger';
   document.body.classList.add('error-page');
   
   // Hide header details and cover image

@@ -50,6 +50,11 @@ async function init() {
     searchQuery = e.target.value.toLowerCase();
     renderPosts();
   });
+
+  const allPostsBtn = document.querySelector('[data-tag="all"]');
+  if (allPostsBtn) {
+    allPostsBtn.addEventListener('click', () => handleTagClick('all'));
+  }
 }
 
 // Extract tags and build filters

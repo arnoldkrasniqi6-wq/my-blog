@@ -10,6 +10,15 @@ themeToggleBtn.addEventListener('click', () => {
   
   document.documentElement.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
+
+  // Sync with Giscus comments theme
+  const iframe = document.querySelector('iframe.giscus-frame');
+  if (iframe) {
+    iframe.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: newTheme === 'dark' ? 'dark' : 'light' } } },
+      'https://giscus.app'
+    );
+  }
 });
 
 // DOM Elements
@@ -166,19 +175,6 @@ async function initArticle() {
 
     // Initialize AdSense for the page
     initAdSense();
-
-    // Set up Cusdis Comments
-    const cusdisThread = document.getElementById('cusdis_thread');
-    if (cusdisThread) {
-      cusdisThread.setAttribute('data-page-id', postId);
-      cusdisThread.setAttribute('data-page-url', window.location.href);
-      cusdisThread.setAttribute('data-page-title', title);
-      
-      // If the Cusdis script loaded before this script finished rendering, re-initialize it
-      if (window.CUSDIS) {
-        window.CUSDIS.initial();
-      }
-    }
 
   } catch (error) {
     console.error('Error loading article:', error);

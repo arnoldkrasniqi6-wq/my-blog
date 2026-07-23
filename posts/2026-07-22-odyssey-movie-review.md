@@ -1,7 +1,7 @@
 ---
 title: "Epic in Scale, Intimate in Heart: A Review of The Odyssey"
 date: "2026-07-22"
-tags: ["Movies", "Reviews", "Cinema"]
+tags: ["Movies", "Reviews"]
 description: "An in-depth review of the new cinematic adaptation of Homer's epic. We explore how it balances massive mythological scale with deeply personal storytelling."
 coverImage: "images/odyssey_movie_cover.jpg"
 ---

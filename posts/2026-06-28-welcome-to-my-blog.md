@@ -1,7 +1,7 @@
 ---
 title: "Welcome to My Daily Blog"
 date: "2026-06-28"
-tags: ["Personal", "Life", "Meta"]
+tags: ["Personal"]
 description: "Welcome to my new digital garden! This is the very first post of a daily writing habit. Here is why I am starting this journey."
 coverImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80"
 ---

@@ -4,7 +4,7 @@ const path = require('path');
 const POSTS_DIR = path.join(__dirname, '../posts');
 const OUTPUT_JSON = path.join(__dirname, '../posts.json');
 const OUTPUT_SITEMAP = path.join(__dirname, '../sitemap.xml');
-const SITE_URL = 'https://yourblogdomain.com'; // User can update this in their deployment
+const SITE_URL = 'https://liveblogger.info'; // User can update this in their deployment
 
 // Helper to parse frontmatter from markdown content
 function parseFrontmatter(fileContent) {

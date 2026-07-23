@@ -3,7 +3,7 @@
 $postsDir = Join-Path $PSScriptRoot "../posts"
 $outputJson = Join-Path $PSScriptRoot "../posts.json"
 $outputSitemap = Join-Path $PSScriptRoot "../sitemap.xml"
-$siteUrl = "https://yourblogdomain.com"
+$siteUrl = "https://liveblogger.info"
 
 Write-Host "Generating posts index using PowerShell..."
 

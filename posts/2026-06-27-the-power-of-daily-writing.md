@@ -1,7 +1,7 @@
 ---
 title: "The Power of Daily Writing"
 date: "2026-06-27"
-tags: ["Productivity", "Writing", "Habits"]
+tags: ["Writing"]
 description: "Exploring how writing every day can transform your career, enhance your creativity, and build a powerful compounding asset."
 coverImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80"
 ---

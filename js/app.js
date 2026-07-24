@@ -141,7 +141,7 @@ function renderPosts() {
     const card = document.createElement('article');
     card.className = 'post-card';
     card.addEventListener('click', () => {
-      window.location.href = `post.html?id=${post.id}`;
+      window.location.href = `${post.id}.html`;
     });
 
     const hasImage = post.coverImage && post.coverImage.trim().length > 0;

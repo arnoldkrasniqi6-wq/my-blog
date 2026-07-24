@@ -124,6 +124,70 @@ $jsonOutput = ConvertTo-Json -InputObject $sortedPosts -Depth 3
 [System.IO.File]::WriteAllText($outputJson, $jsonOutput)
 Write-Host "Successfully generated posts.json with $($sortedPosts.Count) posts."
 
+# Generate static HTML pages
+$templatePath = Join-Path $PSScriptRoot "../post.html"
+$template = [System.IO.File]::ReadAllText($templatePath)
+
+foreach ($post in $sortedPosts) {
+    $html = $template
+    
+    $escapedTitle = $post.title -replace '&', '&amp;' -replace '<', '&lt;' -replace '>', '&gt;' -replace '"', '&quot;' -replace "'", '&apos;'
+    $escapedDesc = $post.description -replace '&', '&amp;' -replace '<', '&lt;' -replace '>', '&gt;' -replace '"', '&quot;' -replace "'", '&apos;'
+    
+    $html = $html -replace '<title>.*?</title>', ('<title>' + $escapedTitle + ' - Liveblogger</title>')
+    $html = $html -replace '<meta name="description" content=".*?">', ('<meta name="description" content="' + $escapedDesc + '">')
+    
+    $imageUrl = ""
+    if ($post.coverImage -and $post.coverImage.Trim() -ne "") {
+        if ($post.coverImage.StartsWith("http")) {
+            $imageUrl = $post.coverImage
+        } else {
+            $imageUrl = "$siteUrl/$($post.coverImage)"
+        }
+    }
+    
+    $ogTags = @"
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="$siteUrl/$($post.id).html">
+  <meta property="og:title" content="$escapedTitle - Liveblogger">
+  <meta property="og:description" content="$escapedDesc">
+  <meta property="og:image" content="$imageUrl">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="$siteUrl/$($post.id).html">
+  <meta property="twitter:title" content="$escapedTitle - Liveblogger">
+  <meta property="twitter:description" content="$escapedDesc">
+  <meta property="twitter:image" content="$imageUrl">
+"@
+
+    $html = $html -replace '(<meta name="description" content=".*?">)', ('$1' + "`n" + $ogTags)
+    
+    $postOutputPath = Join-Path $PSScriptRoot "../$($post.id).html"
+    [System.IO.File]::WriteAllText($postOutputPath, $html)
+}
+Write-Host "Successfully generated $($sortedPosts.Count) static HTML pages."
+
+# Cleanup old generated post HTML files in the root
+$rootDirectory = Join-Path $PSScriptRoot "../"
+$currentPostIds = [System.Collections.Generic.HashSet[string]]::new()
+foreach ($post in $sortedPosts) {
+    $null = $currentPostIds.Add($post.id)
+}
+
+$htmlFiles = Get-ChildItem -Path $rootDirectory -Filter "*.html"
+foreach ($file in $htmlFiles) {
+    if ($file.Name -match "^\d{4}-\d{2}-\d{2}-.*\.html$") {
+        $postId = $file.Name -replace "\.html$", ""
+        if (-not $currentPostIds.Contains($postId)) {
+            Remove-Item -Path $file.FullName -Force
+            Write-Host "Cleaned up old post file: $($file.Name)"
+        }
+    }
+}
+
 # Generate sitemap.xml
 $sitemap = @"
 <?xml version="1.0" encoding="UTF-8"?>
@@ -139,7 +203,7 @@ foreach ($post in $sortedPosts) {
     $sitemap += @"
 
   <url>
-    <loc>$siteUrl/post.html?id=$($post.id)</loc>
+    <loc>$siteUrl/$($post.id).html</loc>
     <lastmod>$($post.date)</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -181,8 +245,8 @@ foreach ($post in $sortedPosts) {
 
   <item>
     <title>$escapedTitle</title>
-    <link>$siteUrl/post.html?id=$($post.id)</link>
-    <guid>$siteUrl/post.html?id=$($post.id)</guid>
+    <link>$siteUrl/$($post.id).html</link>
+    <guid>$siteUrl/$($post.id).html</guid>
     <pubDate>$pubDate</pubDate>
     <description>$escapedDesc</description>$enclosureTag
   </item>

@@ -98,9 +98,17 @@ function formatDate(dateString) {
 
 // Initialize Article Loading
 async function initArticle() {
-  // Get post ID from URL query parameter
+  // Get post ID from URL query parameter or static filename
   const urlParams = new URLSearchParams(window.location.search);
-  const postId = urlParams.get('id');
+  let postId = urlParams.get('id');
+
+  if (!postId) {
+    const path = window.location.pathname;
+    const filename = path.substring(path.lastIndexOf('/') + 1);
+    if (filename && filename.endsWith('.html') && filename !== 'post.html' && filename !== 'index.html') {
+      postId = filename.replace('.html', '');
+    }
+  }
 
   if (!postId) {
     renderNotFound('No article specified.');

@@ -124,6 +124,51 @@ function generateIndex() {
   fs.writeFileSync(OUTPUT_JSON, JSON.stringify(posts, null, 2), 'utf-8');
   console.log(`Successfully generated posts.json with ${posts.length} posts.`);
 
+  // Generate static HTML pages
+  const templatePath = path.join(__dirname, '../post.html');
+  const template = fs.readFileSync(templatePath, 'utf-8');
+  
+  posts.forEach(post => {
+    let html = template;
+    // Replace SEO Meta Tags
+    html = html.replace(/<title>.*?<\/title>/g, `<title>${escapeXml(post.title)} — Liveblogger</title>`);
+    html = html.replace(/<meta name="description" content=".*?">/g, `<meta name="description" content="${escapeXml(post.description)}">`);
+    
+    const ogTags = `
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="${SITE_URL}/${post.id}.html">
+  <meta property="og:title" content="${escapeXml(post.title)} — Liveblogger">
+  <meta property="og:description" content="${escapeXml(post.description)}">
+  <meta property="og:image" content="${post.coverImage ? (post.coverImage.startsWith('http') ? post.coverImage : SITE_URL + '/' + post.coverImage) : ''}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="${SITE_URL}/${post.id}.html">
+  <meta property="twitter:title" content="${escapeXml(post.title)} — Liveblogger">
+  <meta property="twitter:description" content="${escapeXml(post.description)}">
+  <meta property="twitter:image" content="${post.coverImage ? (post.coverImage.startsWith('http') ? post.coverImage : SITE_URL + '/' + post.coverImage) : ''}">
+`;
+    // Insert OG/Twitter tags after description meta tag
+    html = html.replace(/(<meta name="description" content=".*?">)/, `$1\n${ogTags}`);
+    
+    fs.writeFileSync(path.join(__dirname, `../${post.id}.html`), html, 'utf-8');
+  });
+  console.log(`Successfully generated ${posts.length} static HTML pages.`);
+
+  // Cleanup old generated post HTML files in the root
+  const rootFiles = fs.readdirSync(path.join(__dirname, '../'));
+  const currentPostIds = new Set(posts.map(p => p.id));
+  rootFiles.forEach(file => {
+    if (file.match(/^\d{4}-\d{2}-\d{2}-.*\.html$/)) {
+      const postId = file.replace('.html', '');
+      if (!currentPostIds.has(postId)) {
+        fs.unlinkSync(path.join(__dirname, `../${file}`));
+        console.log(`Cleaned up old post file: ${file}`);
+      }
+    }
+  });
+
   // Generate sitemap.xml
   generateSitemap(posts);
 
@@ -145,7 +190,7 @@ function generateSitemap(posts) {
 
   posts.forEach(post => {
     sitemapContent += `  <url>
-    <loc>${SITE_URL}/post.html?id=${post.id}</loc>
+    <loc>${SITE_URL}/${post.id}.html</loc>
     <lastmod>${post.date}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -177,8 +222,8 @@ function generateRSS(posts) {
     const enclosureTag = post.coverImage ? `\n    <enclosure url="${escapeXml(post.coverImage)}" type="image/jpeg" />` : '';
     rssContent += `  <item>
     <title>${escapeXml(post.title)}</title>
-    <link>${SITE_URL}/post.html?id=${post.id}</link>
-    <guid>${SITE_URL}/post.html?id=${post.id}</guid>
+    <link>${SITE_URL}/${post.id}.html</link>
+    <guid>${SITE_URL}/${post.id}.html</guid>
     <pubDate>${pubDate}</pubDate>
     <description>${escapeXml(post.description)}</description>${enclosureTag}
   </item>\n`;

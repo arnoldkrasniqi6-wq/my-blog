@@ -134,6 +134,30 @@ function generateIndex() {
     html = html.replace(/<title>.*?<\/title>/g, `<title>${escapeXml(post.title)} — Liveblogger</title>`);
     html = html.replace(/<meta name="description" content=".*?">/g, `<meta name="description" content="${escapeXml(post.description)}">`);
     
+    // Replace canonical URL
+    html = html.replace(/<link rel="canonical" id="canonical-url" href=".*?">/g, `<link rel="canonical" id="canonical-url" href="${SITE_URL}/${post.id}.html">`);
+
+    // Replace schema json
+    const schemaObj = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "image": post.coverImage ? [post.coverImage.startsWith('http') ? post.coverImage : `${SITE_URL}/${post.coverImage}`] : [],
+      "datePublished": post.date,
+      "dateModified": post.date,
+      "author": [{
+        "@type": "Person",
+        "name": "Liveblogger",
+        "url": SITE_URL
+      }],
+      "description": post.description,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `${SITE_URL}/${post.id}.html`
+      }
+    };
+    html = html.replace(/<script type="application\/ld\+json" id="schema-json"><\/script>/g, `<script type="application/ld+json" id="schema-json">\n${JSON.stringify(schemaObj, null, 2)}\n</script>`);
+
     const ogTags = `
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">

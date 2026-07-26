@@ -1,66 +1,105 @@
 [
-    {
-        "id":  "2026-07-23-sunshine-movie-review",
-        "title":  "The Brilliant, Blind Heat of Danny Boyle\u0027s Sunshine",
-        "date":  "2026-07-23",
-        "tags":  [
-                     "Movies",
-                     "Reviews",
-                     "Sci-Fi"
-                 ],
-        "description":  "We review Danny Boyle\u0027s 2007 space thriller Sunshine. A visual and psychological masterpiece that explores humanity\u0027s fragile place in the face of stellar power.",
-        "coverImage":  "images/sunshine_movie_cover.jpg",
-        "readingTime":  "2 min read"
-    },
-    {
-        "id":  "2026-07-23-firefly-series-review",
-        "title":  "Find a Crew, Find a Job, Keep Flying: A Review of Firefly",
-        "date":  "2026-07-23",
-        "tags":  [
-                     "TV Series",
-                     "Reviews",
-                     "Sci-Fi"
-                 ],
-        "description":  "We review the cult-classic space western Firefly. Exploring how a show with only 14 episodes created one of the most beloved universes in television history.",
-        "coverImage":  "images/firefly_cover.jpg",
-        "readingTime":  "3 min read"
-    },
-    {
-        "id":  "2026-07-23-dune-part-two-review",
-        "title":  "The Rise of the Messiah: A Review of Dune (Part Two)",
-        "date":  "2026-07-23",
-        "tags":  [
-                     "Movies",
-                     "Reviews",
-                     "Sci-Fi"
-                 ],
-        "description":  "Dune: Part Two is an absolute cinematic triumph. We review Denis Villeneuve\u0027s sequel, exploring how it turns a standard hero\u0027s journey on its head.",
-        "coverImage":  "images/dune_two_cover.jpg",
-        "readingTime":  "2 min read"
-    },
-    {
-        "id":  "2026-07-23-dune-part-one-review",
-        "title":  "A Masterclass in Sci-Fi Worldbuilding: A Review of Dune (Part One)",
-        "date":  "2026-07-23",
-        "tags":  [
-                     "Movies",
-                     "Reviews",
-                     "Sci-Fi"
-                 ],
-        "description":  "We review Denis Villeneuve\u0027s cinematic masterpiece Dune: Part One. Exploring its monumental scale, haunting score, and faithful adaptation of Frank Herbert\u0027s universe.",
-        "coverImage":  "images/dune_movie_cover.jpg",
-        "readingTime":  "3 min read"
-    },
-    {
-        "id":  "2026-07-22-odyssey-movie-review",
-        "title":  "Epic in Scale, Intimate in Heart: A Review of The Odyssey",
-        "date":  "2026-07-22",
-        "tags":  [
-                     "Movies",
-                     "Reviews"
-                 ],
-        "description":  "An in-depth review of the new cinematic adaptation of Homer\u0027s epic. We explore how it balances massive mythological scale with deeply personal storytelling.",
-        "coverImage":  "images/odyssey_movie_cover.jpg",
-        "readingTime":  "2 min read"
-    }
+  {
+    "id": "2026-07-26-expanse-part-1-protomolecule",
+    "title": "The Expanse Storyline Part 1: The Protomolecule and the Solar Cold War",
+    "date": "2026-07-26",
+    "tags": [
+      "Sci-Fi",
+      "The Expanse",
+      "Storyline"
+    ],
+    "description": "An in-depth breakdown of the opening act of The Expanse. Explored through the lens of political tension, the discovery of the Protomolecule, the tragedy of Eros, and the gate opening.",
+    "coverImage": "images/expanse_protomolecule.jpg",
+    "readingTime": "5 min read"
+  },
+  {
+    "id": "2026-07-26-expanse-part-2-ring-gates",
+    "title": "The Expanse Storyline Part 2: The Ring Gates and the Free Navy Conflict",
+    "date": "2026-07-26",
+    "tags": [
+      "Sci-Fi",
+      "The Expanse",
+      "Storyline"
+    ],
+    "description": "Exploring the mid-series narrative of The Expanse. The colonization rush of Ilus, the rising radicalism in the Belt, and Marco Inaros' devastating strike on Earth.",
+    "coverImage": "images/expanse_free_navy.jpg",
+    "readingTime": "4 min read"
+  },
+  {
+    "id": "2026-07-26-expanse-part-3-laconian-empire",
+    "title": "The Expanse Storyline Part 3: The Laconian Empire and the Ring Entities",
+    "date": "2026-07-26",
+    "tags": [
+      "Sci-Fi",
+      "The Expanse",
+      "Storyline"
+    ],
+    "description": "The final chapter of The Expanse. Diving into the book-only trilogy: Winston Duarte's Laconian Empire, the terrifying Goths, and James Holden's ultimate sacrifice.",
+    "coverImage": "images/expanse_ring_network.jpg",
+    "readingTime": "5 min read"
+  },
+  {
+    "id": "2026-07-23-dune-part-one-review",
+    "title": "A Masterclass in Sci-Fi Worldbuilding: A Review of Dune (Part One)",
+    "date": "2026-07-23",
+    "tags": [
+      "Movies",
+      "Reviews",
+      "Sci-Fi"
+    ],
+    "description": "We review Denis Villeneuve's cinematic masterpiece Dune: Part One. Exploring its monumental scale, haunting score, and faithful adaptation of Frank Herbert's universe.",
+    "coverImage": "images/dune_movie_cover.jpg",
+    "readingTime": "3 min read"
+  },
+  {
+    "id": "2026-07-23-dune-part-two-review",
+    "title": "The Rise of the Messiah: A Review of Dune (Part Two)",
+    "date": "2026-07-23",
+    "tags": [
+      "Movies",
+      "Reviews",
+      "Sci-Fi"
+    ],
+    "description": "Dune: Part Two is an absolute cinematic triumph. We review Denis Villeneuve's sequel, exploring how it turns a standard hero's journey on its head.",
+    "coverImage": "images/dune_two_cover.jpg",
+    "readingTime": "2 min read"
+  },
+  {
+    "id": "2026-07-23-firefly-series-review",
+    "title": "Find a Crew, Find a Job, Keep Flying: A Review of Firefly",
+    "date": "2026-07-23",
+    "tags": [
+      "TV Series",
+      "Reviews",
+      "Sci-Fi"
+    ],
+    "description": "We review the cult-classic space western Firefly. Exploring how a show with only 14 episodes created one of the most beloved universes in television history.",
+    "coverImage": "images/firefly_cover.jpg",
+    "readingTime": "3 min read"
+  },
+  {
+    "id": "2026-07-23-sunshine-movie-review",
+    "title": "The Brilliant, Blind Heat of Danny Boyle's Sunshine",
+    "date": "2026-07-23",
+    "tags": [
+      "Movies",
+      "Reviews",
+      "Sci-Fi"
+    ],
+    "description": "We review Danny Boyle's 2007 space thriller Sunshine. A visual and psychological masterpiece that explores humanity's fragile place in the face of stellar power.",
+    "coverImage": "images/sunshine_movie_cover.jpg",
+    "readingTime": "2 min read"
+  },
+  {
+    "id": "2026-07-22-odyssey-movie-review",
+    "title": "Epic in Scale, Intimate in Heart: A Review of The Odyssey",
+    "date": "2026-07-22",
+    "tags": [
+      "Movies",
+      "Reviews"
+    ],
+    "description": "An in-depth review of the new cinematic adaptation of Homer's epic. We explore how it balances massive mythological scale with deeply personal storytelling.",
+    "coverImage": "images/odyssey_movie_cover.jpg",
+    "readingTime": "2 min read"
+  }
 ]

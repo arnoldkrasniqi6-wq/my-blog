@@ -6,13 +6,25 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://liveblogger.info/2026-07-23-sunshine-movie-review.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://liveblogger.info/2026-07-26-expanse-part-1-protomolecule.html</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://liveblogger.info/2026-07-23-firefly-series-review.html</loc>
+    <loc>https://liveblogger.info/2026-07-26-expanse-part-2-ring-gates.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://liveblogger.info/2026-07-26-expanse-part-3-laconian-empire.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://liveblogger.info/2026-07-23-dune-part-one-review.html</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -24,7 +36,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://liveblogger.info/2026-07-23-dune-part-one-review.html</loc>
+    <loc>https://liveblogger.info/2026-07-23-firefly-series-review.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://liveblogger.info/2026-07-23-sunshine-movie-review.html</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

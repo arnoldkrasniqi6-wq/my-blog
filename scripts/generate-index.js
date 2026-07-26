@@ -243,7 +243,8 @@ function generateRSS(posts) {
 
   posts.forEach(post => {
     const pubDate = new Date(post.date).toUTCString();
-    const enclosureTag = post.coverImage ? `\n    <enclosure url="${escapeXml(post.coverImage)}" type="image/jpeg" />` : '';
+    const fullCoverImageUrl = post.coverImage ? (post.coverImage.startsWith('http') ? post.coverImage : `${SITE_URL}/${post.coverImage}`) : '';
+    const enclosureTag = post.coverImage ? `\n    <enclosure url="${escapeXml(fullCoverImageUrl)}" type="image/jpeg" />` : '';
     rssContent += `  <item>
     <title>${escapeXml(post.title)}</title>
     <link>${SITE_URL}/${post.id}.html</link>

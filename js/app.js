@@ -221,13 +221,47 @@ function setupNewsletter() {
         btn.disabled = true;
 
         try {
-          const formData = new FormData(form);
+          const callbackName = 'mailerlite_jsonp_' + Math.round(100000 * Math.random());
           
-          // Send request to MailerLite
-          await fetch(action, {
-            method: 'POST',
-            body: formData,
-            mode: 'no-cors' // Use no-cors since we are posting to a different domain
+          const params = new URLSearchParams();
+          params.append('callback', callbackName);
+          params.append('fields[email]', emailInput.value);
+          params.append('ml-submit', '1');
+          params.append('anticsrf', 'true');
+          
+          const script = document.createElement('script');
+          script.src = `${action}?${params.toString()}`;
+          
+          await new Promise((resolve, reject) => {
+            const timeoutId = setTimeout(() => {
+              cleanup();
+              reject(new Error('Subscription request timed out.'));
+            }, 8000);
+
+            function cleanup() {
+              clearTimeout(timeoutId);
+              if (script.parentNode) {
+                script.parentNode.removeChild(script);
+              }
+              delete window[callbackName];
+            }
+
+            window[callbackName] = function(data) {
+              cleanup();
+              // Mailerlite response could have success: true or redirects/html messages
+              if (data && (data.success || data.redirect || data.html)) {
+                resolve(data);
+              } else {
+                reject(new Error(data.message || 'Subscription failed.'));
+              }
+            };
+
+            script.onerror = function() {
+              cleanup();
+              reject(new Error('Network error subscribing.'));
+            };
+
+            document.body.appendChild(script);
           });
 
           // Show success message and reset input
@@ -237,7 +271,7 @@ function setupNewsletter() {
         } catch (err) {
           console.error('Subscription error:', err);
           successMsg.style.display = 'block';
-          successMsg.textContent = 'Something went wrong. Please try again.';
+          successMsg.textContent = err.message || 'Something went wrong. Please try again.';
         } finally {
           btn.textContent = originalText;
           btn.disabled = false;
